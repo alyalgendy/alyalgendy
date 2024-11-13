@@ -1,0 +1,18 @@
+a_coefficient = int(input("Enter the coefficient of the reactant a: "))
+mass_a= float(input("Enter the mass of the reactant a: "))
+momass_a= float(input("Enter the molar mass of the reactant a: "))
+b_coefficient = int(input("Enter the coefficient of the reactant b: "))
+mass_b= float(input("Enter the mass of the reactant b: "))
+momass_b= float(input("Enter the molar mass of the reactant b: "))
+
+x_a=mass_a/momass_a/a_coefficient
+x_b=mass_b/momass_b/b_coefficient
+
+if x_a>x_b:
+    rem_mass=(x_a-x_b)*a_coefficient*momass_a
+    print("b is the limiting reactant, The remaining mass is",rem_mass)
+elif x_b>x_a:
+    rem_mass=(x_b-x_a)*b_coefficient*momass_b
+    print("a is the limiting reactant, The remaining mass is",rem_mass)
+else:
+    print("There is no limiting reactant")
